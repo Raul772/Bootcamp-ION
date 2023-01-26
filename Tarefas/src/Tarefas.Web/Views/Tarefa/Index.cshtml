@@ -16,6 +16,7 @@
                 <td>@item.Descricao</td>
                 <td>@item.Concluida</td>
                 <td><a asp-controller="Tarefa" asp-action="Details" asp-route-id="@item.Id">Detalhes</a></td>
+                <td><a asp-controller="Tarefa" asp-action="Delete" asp-route-id="@item.Id">Remover</a></td>
             </tr>
         }
     </tbody>

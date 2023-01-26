@@ -49,6 +49,58 @@ namespace Tarefas.DAO
                 );
             }
         }
+
+        public void Atualizar(TarefaDTO tarefa){
+            using (var con = Connection){
+
+                con.Open();
+                con.Execute(
+                    @"UPDATE Tarefa SET Titulo = @Titulo, Descricao = @Descricao, Concluida = @Concluida 
+                    WHERE Id = @Id;", tarefa
+                );
+            }
+        }
+
+        public void Excluir(int id)
+        {
+            using (var con = Connection)
+            {
+                con.Open();
+                con.Execute(
+                    @"DELETE FROM Tarefa
+                    Tarefa WHERE Id = @id;", new {id}
+                );
+            }
+        }
         
+        public List<TarefaDTO> Consultar(){
+            
+            using(var con = Connection){
+                
+                con.Open();
+                
+                var result = con.Query<TarefaDTO>(
+                    @"SELECT Id, Titulo, Descricao, Concluida FROM Tarefa"
+                ).ToList();
+                return result;    
+            }
+        }
+
+        public TarefaDTO Consultar(int id){
+            
+            using(var con = Connection){
+                
+                con.Open();
+                
+                var result = con.Query<TarefaDTO>(
+                    @"SELECT Id, Titulo, Descricao, Concluida FROM Tarefa WHERE Id = @id", new {id}
+                ).FirstOrDefault();
+
+                return result;   
+
+            }
+        }
+
+
     }
 }
