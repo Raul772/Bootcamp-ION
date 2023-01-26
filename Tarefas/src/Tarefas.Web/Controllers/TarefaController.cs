@@ -91,6 +91,7 @@ namespace Tarefas.Web.Controllers
         {
             var tarefaDTO = new TarefaDTO 
             {
+                Id = tarefa.Id,
                 Titulo = tarefa.Titulo,
                 Descricao = tarefa.Descricao,
                 Concluida = tarefa.Concluida
@@ -99,11 +100,10 @@ namespace Tarefas.Web.Controllers
             var tarefaDAO = new TarefaDAO();
             tarefaDAO.Atualizar(tarefaDTO);
 
-            return Redirect("index");
+            return RedirectToAction("index");
         }
 
 //      não é necessário a decoração abaixo pq ela é o padrão
-        [HttpGet]
         public IActionResult Update(int id)
         {
             var tarefaDAO = new TarefaDAO();
