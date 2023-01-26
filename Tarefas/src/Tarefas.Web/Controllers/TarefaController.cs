@@ -89,7 +89,7 @@ namespace Tarefas.Web.Controllers
         [HttpPost]
         public IActionResult Update(Tarefa tarefa)
         {
-            var tarefaDTO = new TarefaDTO 
+            var tarefaDTO = new TarefaDTO() 
             {
                 Id = tarefa.Id,
                 Titulo = tarefa.Titulo,
@@ -104,6 +104,7 @@ namespace Tarefas.Web.Controllers
         }
 
 //      não é necessário a decoração abaixo pq ela é o padrão
+        [HttpGet]
         public IActionResult Update(int id)
         {
             var tarefaDAO = new TarefaDAO();
