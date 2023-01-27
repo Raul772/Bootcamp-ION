@@ -7,13 +7,15 @@ public class TarefaViewModel
 {
     public int Id { get; set; }
     
-    [MinLength(5, ErrorMessage = "Título muito curto.")]
+    
     [Required(ErrorMessage = "Por favor informe um Título.")]
+    [MinLength(5, ErrorMessage = "Título muito curto.")]
     [DisplayName("Título")]    
     public string? Titulo { get; set; }        
     
-    [MinLength(5, ErrorMessage = "Descrição muito curta.")]
+    
     [Required(ErrorMessage = "Por favor informe uma Descrição.")]
+    [MinLength(5, ErrorMessage = "Descrição muito curta.")]
     [DisplayName("Descrição")]    
     public string? Descricao { get; set; }  
 

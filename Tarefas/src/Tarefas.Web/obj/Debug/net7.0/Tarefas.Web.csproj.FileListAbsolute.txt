@@ -82,3 +82,4 @@ D:/bitbucket/aspnet-bootcamp/Tarefas/src/Tarefas.Web/obj/Debug/net7.0/Tarefas.We
 /home/decom/Documentos/BootCamp ION - Tarde/bootcamp-base/Tarefas/src/Tarefas.Web/obj/Debug/net7.0/Tarefas.Web.pdb
 /home/decom/Documentos/BootCamp ION - Tarde/bootcamp-base/Tarefas/src/Tarefas.Web/obj/Debug/net7.0/Tarefas.Web.genruntimeconfig.cache
 /home/decom/Documentos/BootCamp ION - Tarde/bootcamp-base/Tarefas/src/Tarefas.Web/obj/Debug/net7.0/ref/Tarefas.Web.dll
+/home/decom/Documentos/BootCamp ION - Tarde/bootcamp-base/Tarefas/src/Tarefas.Web/bin/Debug/net7.0/AutoMapper.dll

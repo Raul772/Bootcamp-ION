@@ -1,7 +1,14 @@
 @model IEnumerable<Tarefas.Web.Models.TarefaViewModel>
 
-<table class="table">
-    <thead>
+
+<style>
+    th,td{
+            padding-top: 1px;
+        }
+</style>
+
+<table class="col-md-8 mx-auto">
+    <thead class="border-bottom">
         <tr>
             <th>@Html.DisplayNameFor(model => model.Titulo)</th>
             <th>@Html.DisplayNameFor(model => model.Descricao)</th>
@@ -18,9 +25,9 @@
                 <td>@item.Titulo</td>
                 <td>@item.Descricao</td>
                 <td>@item.Concluida</td>
-                <td><a asp-controller="Tarefa" asp-action="Details" asp-route-id="@item.Id">Detalhes</a></td>
-                <td><a asp-controller="Tarefa" asp-action="Update" asp-route-id="@item.Id">Editar</a></td>
-                <td><a asp-controller="Tarefa" asp-action="Delete" asp-route-id="@item.Id">Remover</a></td>
+                <td style="padding: 0px;"><a class="btn btn-primary rounded-pill" asp-controller="Tarefa" asp-action="Details" asp-route-id="@item.Id">Detalhes</a></td>
+                <td style="padding: 0px;"><a class="btn btn-primary rounded-pill" asp-controller="Tarefa" asp-action="Update" asp-route-id="@item.Id">Editar</a></td>
+                <td style="padding: 0px;"><a class="btn btn-primary rounded-pill" asp-controller="Tarefa" asp-action="Delete" asp-route-id="@item.Id">Remover</a></td>
             </tr>
         }
     </tbody>
