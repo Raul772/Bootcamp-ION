@@ -8,14 +8,13 @@ using Tarefas.DTO;
 namespace Tarefas.DAO
 {
     
-    public class UsuarioDAO : IUsuarioDAO
+    public class UsuarioDAO : BaseDAO, IUsuarioDAO
     {
-        private string DataSourceFile => Environment.CurrentDirectory + "AppTarefasDB.sqlite";
-        public SQLiteConnection Connection => new SQLiteConnection("DataSource=" + DataSourceFile);
+        
 
         public UsuarioDAO()
         {
-
+            
         }
 
         public void Criar(UsuarioDTO usuario)
