@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KKRWl0vP+boP4xzQuY4eYIxNc73oC3nFEp2zDKYaXfM=",
+  "Hash": "n9TaxF0EFIU3zKiDmBgAt6wxRYg3EcDUjINmpu9yzv8=",
   "Source": "Tarefas.Web",
   "BasePath": "_content/Tarefas.Web",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/decom/Documentos/BootCamp ION - Tarde/bootcamp-base/Tarefas/src/Tarefas.Web/obj/Debug/net7.0/scopedcss/projectbundle/Tarefas.Web.bundle.scp.css"
+    },
+    {
+      "Identity": "/home/decom/Documentos/BootCamp ION - Tarde/bootcamp-base/Tarefas/src/Tarefas.Web/wwwroot/css/footer.css",
+      "SourceId": "Tarefas.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/decom/Documentos/BootCamp ION - Tarde/bootcamp-base/Tarefas/src/Tarefas.Web/wwwroot/",
+      "BasePath": "_content/Tarefas.Web",
+      "RelativePath": "css/footer.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/footer.css"
     },
     {
       "Identity": "/home/decom/Documentos/BootCamp ION - Tarde/bootcamp-base/Tarefas/src/Tarefas.Web/wwwroot/css/site.css",

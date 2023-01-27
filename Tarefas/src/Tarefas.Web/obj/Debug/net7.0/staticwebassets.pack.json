@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/Tarefas.Web.bundle.scp.css"
     },
     {
+      "Id": "/home/decom/Documentos/BootCamp ION - Tarde/bootcamp-base/Tarefas/src/Tarefas.Web/wwwroot/css/footer.css",
+      "PackagePath": "staticwebassets/css/footer.css"
+    },
+    {
       "Id": "/home/decom/Documentos/BootCamp ION - Tarde/bootcamp-base/Tarefas/src/Tarefas.Web/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

@@ -1,16 +1,6 @@
 @model IEnumerable<Tarefas.Web.Models.TarefaViewModel>
 
-
-<style>
-    th,td{
-            padding: 10px;
-        }
-    a:hover{
-        color: black;
-    }
-</style>
-
-<table class="col-md-8 mx-auto">
+<table class="col-sm-8 mx-auto">
     <thead class="border-bottom text-secondary">
         <tr>
             <th>@Html.DisplayNameFor(model => model.Titulo)</th>
@@ -21,19 +11,20 @@
             <th></th>
         </tr>
     </thead>
-    <tbody class="text-" >
+    <tbody>
         @foreach (var item in Model)
         {
             <tr>
                 <td>@item.Titulo</td>
                 <td>@item.Descricao</td>
                 <td>@item.Concluida</td>
-                <td style="padding: 0px;"><a class="text-decoration-none badge bg-primary rounded-pill p-2" asp-controller="Tarefa" asp-action="Details" asp-route-id="@item.Id">Detalhes</a></td>
-                <td style="padding: 0px;"><a class="text-decoration-none badge bg-primary rounded-pill p-2" asp-controller="Tarefa" asp-action="Update" asp-route-id="@item.Id">Editar</a></td>
-                <td><a style="width: 30px;" class="text-decoration-none badge bg-danger btn-hover rounded-pill p-2" asp-controller="Tarefa" asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-xmark"></i></a></td>
+                <td><a class="text-decoration-none badge bg-primary rounded-pill p-2" asp-controller="Tarefa" asp-action="Details" asp-route-id="@item.Id">Detalhes</a></td>
+                <td><a class="text-decoration-none badge bg-primary rounded-pill p-2" asp-controller="Tarefa" asp-action="Update" asp-route-id="@item.Id">Editar</a></td>
+                <td><a class="text-decoration-none badge bg-danger a-hover rounded-pill p-2" asp-controller="Tarefa" asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-xmark"></i></a></td>
             </tr>
         }
     </tbody>
 </table>
+
 <script src="https://kit.fontawesome.com/6886debc6f.js" crossorigin="anonymous"></script>
 
