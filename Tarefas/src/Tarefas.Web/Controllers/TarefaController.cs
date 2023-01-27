@@ -7,21 +7,13 @@ namespace Tarefas.Web.Controllers
 {
     public class TarefaController : Controller
     {
-        public List<Tarefa> listaDeTarefas { get; set; }
+        public List<TarefaViewModel> listaDeTarefas { get; set; }
 
         private TarefaDAO tarefaDAO {get; set;}
 
         public TarefaController()
         {
-            listaDeTarefas = new List<Tarefa>()
-            {
-                new Tarefa() { Id = 1, Titulo = "Escovar os dentes" },
-                new Tarefa() { Id = 2, Titulo = "Arrumar a cama" },
-                new Tarefa() { Id = 3, Titulo = "Por o lixo para fora", Descricao = "somente às terças, quintas e sábados" }
-            };
-
             tarefaDAO = new TarefaDAO();
-
         }
         
 
@@ -29,12 +21,12 @@ namespace Tarefas.Web.Controllers
         {            
             var listaDeTarefasDTO = tarefaDAO.Consultar();
 
-            var listaDeTarefas = new List<Tarefa>();
+            var listaDeTarefas = new List<TarefaViewModel>();
 
             foreach (var tarefaDTO in listaDeTarefasDTO)
             {
                 listaDeTarefas.Add( 
-                    new Tarefa(){ 
+                    new TarefaViewModel(){ 
                         Id = tarefaDTO.Id,
                         Titulo = tarefaDTO.Titulo,
                         Descricao = tarefaDTO.Descricao,
@@ -52,7 +44,7 @@ namespace Tarefas.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Tarefa tarefa)
+        public IActionResult Create(TarefaViewModel tarefa)
         {
 
             if (!ModelState.IsValid)
@@ -76,7 +68,7 @@ namespace Tarefas.Web.Controllers
         {   
             var tarefaDTO = tarefaDAO.Consultar(id);
 
-            var tarefa = new Tarefa(){
+            var tarefa = new TarefaViewModel(){
                 Titulo = tarefaDTO.Titulo,
                 Descricao = tarefaDTO.Descricao,
                 Id = tarefaDTO.Id,
@@ -94,7 +86,7 @@ namespace Tarefas.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(Tarefa tarefa)
+        public IActionResult Update(TarefaViewModel tarefa)
         {
 
             if (!ModelState.IsValid)
@@ -121,7 +113,7 @@ namespace Tarefas.Web.Controllers
         {
             var tarefaDTO = tarefaDAO.Consultar(id);
 
-            var tarefa = new Tarefa(){
+            var tarefa = new TarefaViewModel(){
                 Id = tarefaDTO.Id,
                 Titulo = tarefaDTO.Titulo,
                 Descricao = tarefaDTO.Descricao,
