@@ -1,8 +1,4 @@
 using Dapper;
-using System;
-using System.Data.SQLite;
-using System.IO;
-using System.Linq;
 using Tarefas.DTO;
 
 namespace Tarefas.DAO

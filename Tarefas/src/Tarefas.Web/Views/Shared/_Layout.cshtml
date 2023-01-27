@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Tarefas.Web.styles.css" asp-append-version="true" />
+
+    <!-- Custom styles for this template -->
+    <link href="~/css/footer.css" rel="stylesheet">
+
 </head>
-<body>
+<body class="vh-100">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -19,19 +23,19 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Tarefa" asp-action="Index">Tarefas</a>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-dark btn border border-primary rounded-pill" asp-area="" asp-controller="Tarefa" asp-action="Index">Tarefas</a>
                         </li>                        
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Tarefa" asp-action="Create">Criar Tarefa</a>
+                        <li class="nav-item px-2">
+                            <a class="nav-link text-light btn btn-primary rounded-pill" asp-area="" asp-controller="Tarefa" asp-action="Create">Criar Tarefa</a>
                         </li>                        
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="container h-100">
+        <main class="h-100" role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
